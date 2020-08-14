@@ -1,5 +1,5 @@
 # quickchat
-An esolang based on the combination of brainfuck and Rocket League's quick chat.
+Have you ever wanted to trash talk people in Rocket League, but didn't want to type on your keyboard?  Is a simple quick chat option not enough?  Well now you can, using only a cryptic series of quick chat options! It might take a while, and they might never get what you were doing, but you'll know.  And that's all that matters.
 
 ## Getting Started
 Either download the 'quickchat.exe' from the releases or build from source using CMake.  Then, run ```.\quickchat <source_file>.qc``` in the command-line.  There is an REPL, but loops don't work yet.
@@ -27,6 +27,8 @@ Each line must start with an identifier, followed by either a join command, a le
 
 1. \<Name><SINGLE_SPACE><JOINED\|\|LEFT>\\n
 2. \<NAME>:<SINGLE_SPACE>\<COMMAND>\\n
+
+There's no way to comment the code because I believe code should be self commenting.  See the 'Hello World' example below for instance.
 
 ## Hello World!
 ```
