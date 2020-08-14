@@ -1,35 +1,3 @@
-# quickchat
-An esolang based on the combination of brainfuck and Rocket League's quick chat.
-
-## Getting Started
-Either download the 'quickchat.exe' from the releases or build from source using CMake.  Then, run ```.\quickchat <source_file>.qc``` in the command-line.  There is an REPL, but loops don't work yet.
-
-## Language
-This is based on brainfuck so all the same commands are here, plus a few extra. In quickchat, multiple tapes can exist. Therefore, all commands require the name of the tape to act on.
-
-### Commands
-| Command | brainfuck | Description |
-| ------- | --------- | ----------- |
-| <NAME>: I got it! | > | Increment tape pointer. |
-| <NAME>: Defending... | < | Decrement tape pointer. |
-| <NAME>: Nice shot! | + | Increment value at pointer. |
-| <NAME>: No problem. | - | Decrement value at pointer. |
-| <NAME>: Take the shot! | \[ | Begin loop if value at tape != 0. |
-| <NAME>: What a save! | ] | End loop, jump back to beginning. |
-| <NAME>: Incoming! | , | Accept one byte of input. |
-| <NAME>: Calculated. | . | Output one byte. |
-| <NAME>: Great pass! |   | Copy the current value from the tape indexed at the current value's position. |
-| <Name> joined the match |   | Create a new tape with the name <NAME>. |
-| <Name> left the match |   | Delete the tape with the name <NAME>. |
-
-### Syntax
-Each line must start with an identifier, followed by either a join command, a leave command, or a command. Commands are seperated by newlines.
-
-1. <Name><SINGLE_SPACE><JOINED\|\|LEFT>\\n
-2. <NAME>:<SINGLE_SPACE><COMMAND>\\n
-
-## Hello World!
-```
 Punctuation joined the match
 Capitals joined the match
 Lowercase joined the match
@@ -141,11 +109,3 @@ PUNCTUATION: Calculated.
 Capitals left the match
 Lowercase left the match
 Punctuation left the match
-```
-Output: Hello World!
-
-## References
-Crafting Interpreters: https://craftinginterpreters.com/
-C++ clox implementation: https://github.com/hashemi/cloxpp/tree/master/cloxpp
-
-I built this to learn about interpreters/compilers and C++.
